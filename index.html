@@ -162,43 +162,44 @@ button[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
-
 button {
   --c:  #229091; 
-  
   box-shadow: 0 0 0 .1em inset var(--c); 
   --_g: linear-gradient(var(--c) 0 0) no-repeat;
   background: 
-    var(--_g) calc(var(--_p,0%) - 100%) 0%,
-    var(--_g) calc(200% - var(--_p,0%)) 0%,
-    var(--_g) calc(var(--_p,0%) - 100%) 100%,
-    var(--_g) calc(200% - var(--_p,0%)) 100%;
-  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    var(--_g) calc(var(--_p,100%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,200%)) 100%,
+    var(--_g) calc(var(--_p,100%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,200%)) 0%; /* Change 200% to 400% */
+  background-size: 50.5% calc(var(--_p,0%)/2 + .7%); /* Change 2 to 4 */
   height: 6vh;
   width: 20vh;
-  outline-offset: .1em;
+  outline-offset: .2em;
   transition: background-size .4s, background-position 0s .4s;
 }
+
 button:hover {
   --_p: 100%;
   transition: background-position .4s, background-size 0s;
 }
+
 button:active {
   box-shadow: 0 0 9e9q inset #0009; 
   background-color: var(--c);
   color: #fff;
 }
 
-
-
 button {
   font-family: system-ui, sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem; /* Change 3.5rem to 1.75rem */
   cursor: pointer;
-  padding: .1em .6em;
+  padding: .05em .3em; /* Change .1em .6em to .05em .3em */
   font-weight: bold;  
+  height: 6vh;
+  width: 20vh;
   border: none;
 }
+
 footer{
   float: bottom;
   margin-top:76vh ;
